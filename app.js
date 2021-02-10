@@ -16,6 +16,10 @@ app.set('views', [path.join(__dirname, 'templates')]);
 
 app.use(router);
 
+app.get('/favicon.ico', function (req, res, next) {
+    res.sendFile(path.join(__dirname, 'favicon.ico'));
+});
+
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
