@@ -8,3 +8,8 @@ Learning JS Stack application
 - [ ] - create a landing page to list all the pokemons
 - [ ] - filter pokemons
 - [ ] - add pokemons to the cart 
+
+# Setup
+- clone the repo
+- perform npm install
+- node sticky.js
