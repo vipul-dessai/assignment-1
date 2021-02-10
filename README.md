@@ -2,7 +2,7 @@
 Learning JS Stack application
 
 # TODO
-- [ ] - init basic stucture
+- [x] - init basic stucture
 - [ ] - integrate stack
 - [ ] - Create a Register, Login form
 - [ ] - create a landing page to list all the pokemons
