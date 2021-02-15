@@ -1,4 +1,10 @@
 <body>
-    {{{yield}}}
+    <section class="menu">
+        <a href="/cart">Cart</a>
+        <a href="/pokemons">Pokemons</a>
+    </section>
+    <section class="content">
+        {{{yield}}}
+    </section>
     <script src="/static/js/index.js"></script>
 </body>
