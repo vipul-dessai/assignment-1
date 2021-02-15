@@ -1,5 +1,4 @@
 <body>
-    <a href="test-tep">test</a>
     {{{yield}}}
     <script src="/static/js/index.js"></script>
 </body>
