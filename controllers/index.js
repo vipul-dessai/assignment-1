@@ -26,4 +26,13 @@ module.exports = {
             }
         )
     },
+    renderTest: function(req, res, next) {
+        res.render(
+            'test-tep',
+            {
+                layout: 'index',
+                title: 'test'
+            }
+        )
+    },
 }
