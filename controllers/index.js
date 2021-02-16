@@ -26,4 +26,13 @@ module.exports = {
             }
         )
     },
+    renderRegister: function(req, res, next) {
+        res.render(
+            'register',
+            {
+                layout: 'index',
+                title: 'Register'
+            }
+        )
+    },    
 }
