@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Registration Form</h1>
-    <form action = "/" method="GET">
+    <form method="POST">
 
         <fieldset >
             <Legend>UserName</Legend>
