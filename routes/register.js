@@ -44,12 +44,14 @@ registerRouter.post('/', function (req, res, next) {
              console.log("flag value ="+flag);
         }
 
-
+        
         if(flag=="set"){
-            res.redirect("/");
+            //res.redirect("/");
+            indexController.renderDashboard(req, res, next);
             console.log('Flag is set ');
         }else{
-            res.redirect("/login");
+            //res.redirect("/login");
+            indexController.renderLogin(req, res, next);
             console.log('Flag is not set ');
         
         }
