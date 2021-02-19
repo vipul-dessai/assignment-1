@@ -24,8 +24,11 @@
     "cookie-parser": "^1.4.5",
     "csurf": "^1.11.0",
     "express": "^4.17.1",
+    "form-data": "^4.0.0",
     "helmet": "^4.4.1",
     "hjs": "0.0.6",
-    "hogan-express": "^0.5.2"
+    "hogan-express": "^0.5.2",
+    "jsdom": "^16.4.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }
