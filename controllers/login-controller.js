@@ -1,33 +1,14 @@
-const axios = require('axios');
-var users;
-var vaild=false;
-var resp;
+const express = require('express');
+const router = express.Router();
+const loginService = require('./login-service.js');
+const bodyParser = require('body-parser');
+router.use(bodyParser.urlencoded({extended:true}));
 
-async function validate(email,uname){
-    let res = await axios.get('https://jsonplaceholder.typicode.com/users?_start=1&_limit=5');
-    users = res.data;
+router.post('/validate', validate);
 
-    for(var i=0 ;i<users.length;i++){
-        if(users[i].email == email && users[i].username == uname){
-            vaild=true;
-            break;
-        }
-        else (users[i].email != email || users[i].username != uname)
-            vaild=false;
-    }
-
-    if(vaild){
-        console.log("VALID USER");
-        resp={vaild:'true'};
-        return resp;
-    }
-    else{
-        console.log("INVALID USER");
-        resp={vaild:'false'};
-        return resp;
-    }
-}
-
-module.exports={
-    validate
+module.exports = router;
+function validate(req,res,next){
+    loginService.validate(req.body.email,req.body.uname)
+    .then(valid => res.json({success: valid}))
+    .catch(err => next(err));
 }

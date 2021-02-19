@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form method="POST">
+
+        <fieldset >
+            <Legend>UserName</Legend>
+            <input type="username" placeholder="username" /required>
+        </fieldset>        
+
+        <fieldset >
+            <Legend>PERSON DETAILS</Legend>
+            <input type="text" name="name" placeholder="Name" /required>
+            <input type="email" name="email" placeholder="Email" /required>
+        </fieldset>
+
+        <fieldset >
+
+            <Legend>Address</Legend>
+            
+                <input type="text" name="street" placeholder="street" /required>
+                <input type="text" name="suite" placeholder="suite" /required>
+                <input type="text" name="city" placeholder="city" /required>
+                <input type="tel" name="zip" placeholder="zipcode" /required><br><br>
+           
+            <fieldset>
+                <legend>GEO LOCATION</legend>
+                    <input type="lat" placeholder="lat" /required>
+                    <input type="lan" placeholder="lan" /required><br>
+            </fieldset>
+
+        </fieldset>
+
+        <fieldset >
+            <Legend>Contact DETAILS</Legend>
+            <input type="tel" name="phone" placeholder="Phone" /required>
+            <input type="url" name="url" placeholder="Website" /required>
+        </fieldset>
+
+ 
+         <fieldset >
+            <Legend>Company DETAILS</Legend>
+            <input type="text" name="cname" placeholder="Company name" /required>
+            <input type="text" name="catchphrase" placeholder="Catch Phrase" /required>
+            <input type="text" name="bs" placeholder="BS" /required>
+
+        </fieldset>
+
+         <input type="submit" placeholder="Name" /required><br>
+ 
+
+
+    </form>
+</body>
+</html>

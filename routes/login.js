@@ -1,6 +1,8 @@
+const { default: axios } = require('axios');
 const express = require('express');
 const path = require('path');
 const loginRouter = express.Router();
+
 const ax = require('axios');
 const login_obj = require('../controllers/login-controller');
 const bodyPaObj=require('body-parser');
@@ -9,6 +11,10 @@ const bodyPaObj=require('body-parser');
 loginRouter.use(bodyPaObj.json({extended:true}));
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const indexController = require('../controllers/index');
+
+
+ 
+
 loginRouter.get('/', function (req, res, next) {
     indexController.renderLogin(req, res, next);
 });
