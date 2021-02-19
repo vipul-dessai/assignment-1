@@ -10,17 +10,16 @@ const register = require('../routes/register');
 
 const indexController = require('../controllers/index');
 
-
 //body parser
 const bodyParser = require('body-parser');
 const app = express();
-app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 router.use('/login', login);
 router.use('/cart', cart);
 router.use('/register', register);
-
+router.use('/validation', require('../controllers/login-controller'));
 router.get('/', function (req, res, next) {
     indexController.renderDashboard(req, res, next);
 });
