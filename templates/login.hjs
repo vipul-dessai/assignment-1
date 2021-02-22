@@ -1,10 +1,11 @@
 <p>{{title}}</p>
-<form name="userInfo" >
-<label>Username:</label>
-<input type="text" name="userName" placeholder="type your username" required /><br>
-<label>Emailid:</label>
-<input type="text" name="emailId"  placeholder="type your emailid" required />
-<br>
-<a href="../routes/login.js"><button >Submit</button></a>
+<form method="POST">
+    <label>Username:</label>
+    <input type="text" name="userName" placeholder="type your username" required /><br>
+    <br>
+    <label>Emailid:</label>
+    <input type="text" name="emailId" placeholder="type your emailid" required />
+    <br>
+    <a href="../routes/login.js"><button type="submit">Submit</button></a>
 </form>
 <a href="/register">Register</a>
