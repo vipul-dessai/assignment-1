@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <img src ='../static/images/pokemon.jpg'><img>
     <h1>Registration Form</h1>
     <form method="POST">
 
