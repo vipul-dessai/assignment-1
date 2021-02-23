@@ -10,14 +10,11 @@ registerRouter.use(express.json());
 
 const indexController = require('../controllers/index');
 
-var flag="notset";
-
 registerRouter.get('/', function (req, res, next) {
     indexController.renderRegister(req, res, next);
 });
 
 registerRouter.post('/', function (req, res, next) {   
-   
     axios.post('https://jsonplaceholder.typicode.com/users', {
         //body parser
         name : req.body.name,
@@ -25,28 +22,11 @@ registerRouter.post('/', function (req, res, next) {
     })
     .then(function (response) {
         if(response.status == 201){
-            console.log(response);
-            console.log('user registered Successfully !');
-            //link to dashboard    
-             flag ="set";
-             console.log("flag value ="+flag);
+             indexController.renderDashboard(req, res, next);
         }else{
-            console.log('user registration failed');
-             flag ="notset";
-             console.log("flag value ="+flag);
-        }   
-        if(flag=="set"){
-            //res.redirect("/");
-            indexController.renderDashboard(req, res, next);
-            console.log('Flag is set ');
-        }else{
-            //res.redirect("/login");
             indexController.renderLogin(req, res, next);
-            console.log('Flag is not set ');
         }
     })
-    .catch(function (error) {
-      
-    });
+    .catch(function (error) {});
 });
 module.exports = registerRouter;
