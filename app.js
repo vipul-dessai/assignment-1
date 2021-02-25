@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyparser = require('body-parser');
 const app = express();
 
 const router = require('./routes')
@@ -13,6 +14,9 @@ app.set('partials', {
 
 app.engine('hjs', require('hogan-express'));
 app.set('views', [path.join(__dirname, 'templates')]);
+
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: false }));
 
 app.use(router);
 
