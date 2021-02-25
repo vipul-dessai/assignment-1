@@ -15,7 +15,6 @@ async function validate(email,uname){
             valid=false;
     }
     return valid;
-    
 }
 
 module.exports={

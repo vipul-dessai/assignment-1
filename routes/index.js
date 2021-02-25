@@ -18,11 +18,10 @@ app.use(bodyParser.json());
 router.use('/login', login);
 router.use('/cart', cart);
 router.use('/register', register);
-router.use('/validation', require('../controllers/login-controller'));
+
 router.get('/', function (req, res, next) {
     indexController.renderDashboard(req, res, next);
 });
-
 
 router.post("/",function(req,res){
     console.log(req.body);
@@ -36,9 +35,6 @@ router.post("/",function(req,res){
     .catch(function (error) {
       
     });
-    
-    
-
 });
 
 module.exports = router;

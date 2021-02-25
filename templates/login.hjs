@@ -1,11 +1,13 @@
 <p>{{title}}</p>
-<form method="POST">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<form id="formdata"  method="POST">
     <label>Username:</label>
-    <input type="text" name="userName" placeholder="type your username" required /><br>
+    <input type="text" id="userName" placeholder="type your username" required /><br>
     <br>
     <label>Emailid:</label>
-    <input type="text" name="emailId" placeholder="type your emailid" required />
+    <input type="text" id="emailId" placeholder="type your emailid" required />
     <br>
-    <a href="../routes/login.js"><button type="submit">Submit</button></a>
+    <button type="submit">Submit</button>
 </form>
 <a href="/register">Register</a>
