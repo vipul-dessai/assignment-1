@@ -8,6 +8,7 @@ router.post('/validate', validate);
 
 module.exports = router;
 function validate(req,res,next){
+    console.log(req.body.email,req.body.uname),
     loginService.validate(req.body.email,req.body.uname)
     .then(valid => res.json({success: valid}))
     .catch(err => next(err));

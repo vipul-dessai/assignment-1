@@ -15,41 +15,8 @@ loginRouter.get('/', function (req, res, next) {
 });
 
 //posting the data
-loginRouter.post('/', function (req, res, next) {
-
-
-  axios.post('http://localhost:3000/validation/validate', qs.stringify({
-    uname: req.body.userName,
-    email: req.body.emailId
-  }), {
-
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
-
-
-
-
-    }
-
-
-  })
-
-    .then(function (response) {
-
-      if (response.data.success) {
-        console.log(response.data);
-
-        indexController.renderDashboard(req, res, next);
-       
-
-
-
-      }
-      else {
-        indexController.renderLogin(req, res, next);
-
-      }
-    });
+loginRouter.post('public/js/index.js', function (req, res, next) {
+  
 });
 
 
