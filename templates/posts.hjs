@@ -1,0 +1,7 @@
+<h3>{{title}}</h3>
+
+<div ng-app="app" ng-controller="MainCtrl">
+  <div ui-grid="gridOptions1" ui-grid-pagination ui-grid-resize-columns ui-grid-move-columns class="grid"></div>
+  <br/>
+</div>
+<script src="../static/js/posts.js"></script>

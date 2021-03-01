@@ -34,5 +34,14 @@ module.exports = {
                 title: 'Register'
             }
         )
-    },    
+    },
+    renderPosts: function(req, res, next) {
+        res.render(
+            'posts',
+            {
+                layout: 'index',
+                title: 'Posts'
+            }
+        )
+    },     
 }
