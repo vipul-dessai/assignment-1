@@ -12,7 +12,7 @@ document.getElementById("formdata").onsubmit = (e) => {
       window.location = "/";
     }
     else {
-      // TODO: show error
+      alert("Incorrect username or password");
     }
   });
 }
