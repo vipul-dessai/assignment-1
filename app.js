@@ -25,5 +25,6 @@ app.get('/favicon.ico', function (req, res, next) {
 });
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
-
+app.use('/dist', express.static(path.join(__dirname, 'build')))
+//app.use('/dist',express.static(path.join(__dirname + 'build')));
 module.exports = app;
